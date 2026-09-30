@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout – Leafwork</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="features.css">
+</head>
+<body data-page="checkout">
+<main class="wrap page">
+  <h1>Checkout</h1>
+  <div class="panel">
+    <form id="orderForm">
+      <label>Full name <input name="name" required autocomplete="name"></label>
+      <div class="two">
+        <label>Email <input type="email" name="email" required autocomplete="email"></label>
+        <label>Phone <input type="tel" name="phone" required pattern="[0-9]{10}" title="10-digit phone number" autocomplete="tel"></label>
+      </div>
+      <label>Address <textarea name="address" required style="min-height:80px"></textarea></label>
+      <div class="two">
+        <label>City <input name="city" required></label>
+        <label>Pincode <input name="pin" required pattern="[0-9]{6}" title="6-digit pincode"></label>
+      </div>
+      <fieldset><legend>Payment</legend>
+        <label><input type="radio" name="pay" value="cod" checked> Cash on delivery</label>
+        <label><input type="radio" name="pay" value="upi"> UPI</label>
+        <label><input type="radio" name="pay" value="card"> Card</label>
+      </fieldset>
+      <button class="btn" type="submit">Place order</button>
+    </form>
+    <div class="done hidden" id="orderDone">
+      <h2>Order placed</h2>
+      <p>Thank you, <span id="orderName"></span>. We will email your confirmation shortly.</p>
+      <a class="btn" href="index.html">Keep shopping</a>
+    </div>
+  </div>
+  <div class="panel sum"><h2 style="margin-top:0">Your order</h2><div id="summary"></div></div>
+</main>
+<script src="script.js"></script>
+   <script src="features.js"></script>
+</body>
+</html>

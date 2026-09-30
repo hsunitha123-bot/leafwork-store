@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact – Leafwork</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="features.css">
+</head>
+<body data-page="contact">
+<main class="wrap page">
+  <h1>Talk to a plant person.</h1>
+  <div class="panel">
+    <form id="contactForm">
+      <div class="two">
+        <label>Name <input name="name" required autocomplete="name"></label>
+        <label>Email <input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <label>Topic
+        <select name="topic"><option>Plant care question</option><option>Order help</option><option>Bulk or gift order</option><option>Something else</option></select>
+      </label>
+      <label>Message <textarea name="message" required></textarea></label>
+      <button class="btn" type="submit">Send message</button>
+    </form>
+    <div class="done hidden" id="contactDone">
+      <h2>Message sent</h2>
+      <p>We reply within one working day.</p>
+      <a class="btn" href="index.html">Back to shop</a>
+    </div>
+  </div>
+  <div class="panel">
+    <ul class="info-list">
+      <li><b>Email</b><br>hello@leafwork.example</li>
+      <li><b>Phone</b><br>+91 98765 43210</li>
+      <li><b>Hours</b><br>Mon to Sat, 10am to 6pm</li>
+      <li><b>Studio</b><br>12 Garden Road, Your City</li>
+    </ul>
+  </div>
+</main>
+<script src="script.js"></script>
+   <script src="features.js"></script>
+</body>
+</html>

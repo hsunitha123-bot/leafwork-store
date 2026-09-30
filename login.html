@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in – Leafwork</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="features.css">
+</head>
+<body data-page="login">
+<main class="wrap authwrap"><div class="panel">
+  <div class="tabs">
+    <button class="chip" id="tabIn" type="button" aria-pressed="true">Log in</button>
+    <button class="chip" id="tabUp" type="button" aria-pressed="false">Create account</button>
+  </div>
+  <form id="loginForm">
+    <label>Email <input type="email" name="email" required autocomplete="email"></label>
+    <label>Password <input type="password" name="pass" required autocomplete="current-password"></label>
+    <p class="err" id="loginErr" role="alert"></p>
+    <button class="btn" type="submit">Log in</button>
+    <p class="hint">Demo admin: admin@leafwork.com / admin123</p>
+  </form>
+  <form id="signupForm" class="hidden">
+    <label>Full name <input name="name" required autocomplete="name"></label>
+    <label>Email <input type="email" name="email" required autocomplete="email"></label>
+    <label>Password (6+ characters) <input type="password" name="pass" required minlength="6" autocomplete="new-password"></label>
+    <p class="err" id="signupErr" role="alert"></p>
+    <button class="btn" type="submit">Create account</button>
+  </form>
+</div></main>
+<script src="script.js"></script>
+<script src="features.js"></script>
+</body>
+</html>
